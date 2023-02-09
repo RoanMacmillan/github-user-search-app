@@ -1,0 +1,71 @@
+/* Search bar */
+
+.SearchBar {
+
+    width: 327px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1E2A47;
+    border-radius: 15px;
+    padding-left: 16px;
+    padding-right: 7px;
+}
+
+.SearchIcon {
+
+    width: 20px;
+    height: 20px;
+}
+
+/* Input field */
+
+.SearchBar input {
+
+
+    width: 184px;
+    height: 25px;
+    border: none;
+    background: none;
+
+}
+
+input::placeholder {
+
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+    color: #FFFFFF;
+}
+
+input:focus {
+
+    border: none;
+    outline: none;
+}
+
+/* Button */
+
+
+.SearchButton {
+
+    background: #0079FF;
+    border-radius: 10px;
+    height: 46px;
+    width: 84px;
+    outline: none;
+    border: none;
+}
+
+
+/* results container */
+
+.ResultsContainer {
+
+    width: 327px;
+    height: 517px;
+    background: #1E2A47;
+    border-radius: 15px;
+    margin-top: 16px;
+}
