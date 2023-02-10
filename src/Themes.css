@@ -1,0 +1,68 @@
+/* Transition */
+
+
+.dark, .light {
+    transition: .2s all;
+    
+}
+
+/* Light */
+
+.App.light {
+
+    background-color: white;
+}
+
+.light .SearchBar,
+.light .ResultsContainer {
+
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;    
+    background-color: white;
+
+}
+
+
+.light .StatsContainer {
+
+    background-color: white;
+}
+
+
+.light span,
+.light p
+ {
+
+    color: #4B6A9B;
+    
+}
+
+.light h1 {
+    color: #222731;
+}
+
+.light h2 {
+
+    color:#2B3442;
+}
+
+
+.light .StatsChild span:first-child {
+    
+    color: #4B6A9B;  
+
+
+}
+
+
+.light .ProfileChild span:nth-of-type(2) {
+
+
+    color: #697C9A;
+}
+
+.light input::placeholder,
+.light input {
+
+    color: #4B6A9B;
+}
+  

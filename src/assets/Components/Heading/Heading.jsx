@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
-import Sun from '../../Images/icon-sun.svg'
-import Moon from '../../Images/icon-moon.svg'
+import React, { useState } from 'react';
+import Sun from '../../Images/icon-sun.svg';
+import Moon from '../../Images/icon-moon.svg';
+import './Heading.css'
 
-const Heading = () => {
-  const [mode, setMode] = useState('light');
-
+const Heading = ({ mode, onToggle }) => {
   const handleModeToggle = () => {
-    setMode(mode === 'light' ? 'dark' : 'light');
+    onToggle(mode === 'light' ? 'dark' : 'light');
   };
 
   return (

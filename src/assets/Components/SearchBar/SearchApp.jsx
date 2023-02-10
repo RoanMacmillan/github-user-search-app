@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 import SearchIcon from '../../Images/icon-search.svg'
-import SearchButton from '../SearchBar/SearchButton/SearchButton'
-import InputField from '../SearchBar/InputField/InputField'
-import './SearchBar.css'
+import SearchButton from './SearchButton/SearchButton'
+import InputField from './InputField/InputField'
+import './SearchApp.css'
 import LocationIcon from '../../Images/icon-location.svg'
 import BlogIcon from '../../Images/icon-website.svg'
 import TwitterIcon from '../../Images/icon-twitter.svg'
 import CompanyIcon from '../../Images/icon-company.svg'
 
-
+import classnames from 'classnames';
 
 const SearchBar = () => {
     const [searchValue, setSearchValue] = useState('')
@@ -29,7 +29,7 @@ const SearchBar = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         if (!searchValue) {
-            return setErrorMessage('Please enter a valid username')
+            return setErrorMessage('Invalid User!')
         }
 
         try {
@@ -38,10 +38,11 @@ const SearchBar = () => {
                 throw new Error(response.statusText)
             }
             const data = await response.json()
+            setErrorMessage('')
             setResults(data)
             console.log(data)
         } catch (error) {
-            setErrorMessage(`Error fetching data for user ${searchValue}: ${error.message}`)
+            setErrorMessage(`Invalid User!`)
         }
     }
 
@@ -55,11 +56,11 @@ const SearchBar = () => {
     return (
 
         <>
+
             <form className='SearchBar' onSubmit={handleSubmit}>
                 <img className='SearchIcon' src={SearchIcon} alt='search icon' />
-                <InputField type='text' placeholder="Search GitHub username…" onChange={handleChange} />
-                {/* {errorMessage && <div className="error">{errorMessage}</div>} */}
-
+                <InputField className={errorMessage ? 'input-error' : ''} type='text' placeholder="Search GitHub username…" onChange={handleChange} spellCheck='false' />
+                {errorMessage && <div className="error">{errorMessage}</div>}
                 <SearchButton type='submit' />
             </form>
 
@@ -103,21 +104,21 @@ const SearchBar = () => {
                 </div>
 
                 <div className='LinksContainer'>
-                    <div className='LinksChild'>
+                    <div className={classnames("LinksChild", { 'not-available': !results.location })}>
                         <img className='ProfileIcon' src={LocationIcon} alt='Icon' />
-                        <span>{results.location ? results.location : 'Not Available'}</span>
+                        <span >{results.location ? results.location : 'Not Available'}</span>
                     </div>
-                    <div className='LinksChild'>
+                    <div className={classnames("LinksChild", { 'not-available': !results.blog })}>
                         <img className='ProfileIcon' src={BlogIcon} alt='Icon' />
-                        <span>{results.twitter_username ? results.twitter_username : 'Not Available'}</span>
+                        <a href={results.blog || 'https://github.blog'}>{results.blog ? results.blog : 'Not Available'}</a>
                     </div>
-                    <div className='LinksChild'>
+                    <div className={classnames("LinksChild", { 'not-available': !results.twitter_username })}>
 
                         <img className='ProfileIcon' src={TwitterIcon} alt='Icon' />
 
-                        <span>{results.blog ? results.blog : 'Not Available'}</span>
+                        <a href={`https://twitter.com/${results.twitter_username}`}>{results.twitter_username ? results.twitter_username : 'Not Available'}</a>
                     </div>
-                    <div className='LinksChild'>
+                    <div className={classnames("LinksChild", { 'not-available': !results.company })}>
 
                         <img className='ProfileIcon' src={CompanyIcon} alt='Icon' />
 

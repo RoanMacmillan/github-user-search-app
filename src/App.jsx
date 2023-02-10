@@ -1,16 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-import SearchBar from './assets/Components/SearchBar/SearchBar'
+import SearchApp from './assets/Components/SearchBar/SearchApp'
 import Heading from './assets/Components/Heading/Heading'
-function App() {
-  const [count, setCount] = useState(0)
+import './Themes.css'
+const App = () => {
+  const [mode, setMode] = useState('dark');
+
+  const handleModeToggle = (newMode) => {
+    setMode(newMode);
+  };
 
   return (
-    <div className="App">
-      <Heading />
-      <SearchBar />
+    <div className={`App ${mode}`}>
+      <Heading mode={mode} onToggle={handleModeToggle} />
+      <div className='content'>
+        <SearchApp />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

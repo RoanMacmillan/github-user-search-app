@@ -26,10 +26,19 @@ html {
 /* min body height */
 
 body {
+
   min-height: 100vh;
-  background: #141D2F;
+
+}
+
+.App {
   display: flex;
   justify-content: center;
+  position: relative;
+  background: #141D2F;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
 /* responsive images/videos */
@@ -102,30 +111,6 @@ p {
   color: #ffffffda;
 }
 
-h1 {
 
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 39px;
-}
 
-.HeadingContainer {
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 31px;
-  margin-bottom: 35px;
-}
-
-.HeadingContainer span {
-
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 19px;
-  text-align: right;
-  letter-spacing: 2.5px;
-  margin-lefT: auto;
-  margin-right: 16px;
-}
