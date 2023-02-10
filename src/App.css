@@ -42,3 +42,90 @@ video {
 }
 
 
+span,
+p {
+
+  font-size: 13px;
+}
+
+h2 {
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+p {
+
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 25px;
+  /* or 192% */
+
+
+  color: #ffffffda;
+}
+
+
+.StatsChild span:first-child {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #ffffffda;
+}
+
+.StatsChild span:nth-last-child(1) {
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.ProfileChild span:first-of-type {
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 19px;
+
+  color: #0079FF;
+
+}
+
+.ProfileChild span:nth-of-type(2) {
+
+  margin-top: 6px;
+  color: #ffffffda;
+}
+
+h1 {
+
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.HeadingContainer {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 31px;
+  margin-bottom: 35px;
+}
+
+.HeadingContainer span {
+
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19px;
+  text-align: right;
+  letter-spacing: 2.5px;
+  margin-lefT: auto;
+  margin-right: 16px;
+}
