@@ -61,8 +61,20 @@
 }
 
 .light input::placeholder,
-.light input {
+.light input,
+.light a {
 
     color: #4B6A9B;
 }
   
+.light .Moon:hover {
+
+    filter: invert(0%) sepia(100%) saturate(31%) hue-rotate(114deg) brightness(57%) contrast(100%);
+
+}
+
+
+.light .ProfileIcon {
+
+    filter: unset;
+}

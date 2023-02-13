@@ -10,7 +10,7 @@ const Heading = ({ mode, onToggle }) => {
 
   return (
     <div className='HeadingContainer'>
-      <h1>devinfinder</h1>
+      <h1>devfinder</h1>
 
       {mode === 'dark' && (
         <>

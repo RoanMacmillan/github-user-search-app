@@ -13,6 +13,7 @@ h1 {
     margin-top: 31px;
     margin-bottom: 35px;
     width: 327px;
+    
   
   }
   
@@ -27,3 +28,37 @@ h1 {
     margin-lefT: auto;
     margin-right: 16px;
   }
+
+
+  .Sun, .Moon {
+
+    cursor: pointer;
+    transition: all .2s;
+  }
+
+  
+  
+  .HeadingContainer:hover .Sun {
+
+    filter: invert(69%) sepia(9%) saturate(1343%) hue-rotate(185deg) brightness(153%) contrast(87%)
+  }
+
+
+  @media screen and (min-width: 750px) {
+
+    .HeadingContainer {
+
+        width: 573px;
+    }
+
+  }
+
+
+  @media screen and (min-width: 1440px) {
+
+    .HeadingContainer {
+
+      width: 730px;
+    }
+  }
+  
