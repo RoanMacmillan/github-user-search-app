@@ -490,6 +490,12 @@ margin-top: 2px;
     width: 100%;
    }
 
+   .SearchIcon {
+
+    width: 21.22px !important;
+    height: 21.16px !important;
+   }
+
    .DesktopBio {
 
     display: block;
