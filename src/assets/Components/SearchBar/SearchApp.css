@@ -272,7 +272,7 @@ line-height: 25px;
     }
 
     input::placeholder {
-        color: rgba(255, 255, 255, 0.74);
+        color: rgb(255, 255, 255);
     }
 
     .input-error {
@@ -382,6 +382,7 @@ line-height: 25px;
     .SearchBar {
 
         padding-right: 10px;
+        height: 69px;
     }
 
    p, .StatsContainer, .LinksContainer {
