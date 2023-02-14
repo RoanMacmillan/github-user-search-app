@@ -197,7 +197,7 @@ a:hover {
 
 .error {
 
-    color: red;
+    color: #F74646;
     font-weight: 400;
     font-size: 13px;
     line-height: 25px;
@@ -315,15 +315,7 @@ line-height: 25px;
         gap: 41px;
     }
 
-    h2 {
-
-        font-size: 26px;
-    }
-
-    p {
-
-        font-size: 15px;
-    }
+    
     .LinksContainer {
 
         flex-direction: row;
@@ -333,31 +325,41 @@ line-height: 25px;
         
     }
 
-    .LinksContainer a,
-    .LinksContainer span {
-        font-size: 15px;
-    }
-
-    .StatsChild span:nth-last-child(1) {
-
-        font-size: 22px;
-      }
-      
-      .ProfileChild span:first-of-type {
-      
-font-size: 16px;
-margin-top: 5px;
-      }
-
-      .ProfileChild span:nth-of-type(2) {
-
-        font-size: 15px;
-      }
+    
       
     .Left, .Right {
         gap: 19px;
     }
+    h2 {
 
+        font-size: 26px;
+    }
+    
+    p {
+    
+        font-size: 15px;
+    }
+    
+    .LinksContainer a,
+        .LinksContainer span {
+            font-size: 15px;
+        }
+    
+        .StatsChild span:nth-last-child(1) {
+    
+            font-size: 22px;
+          }
+          
+          .ProfileChild span:first-of-type {
+          
+    font-size: 16px;
+    margin-top: 5px;
+          }
+    
+          .ProfileChild span:nth-of-type(2) {
+    
+            font-size: 15px;
+          }
    
 }
 

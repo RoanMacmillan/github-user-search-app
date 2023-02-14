@@ -46,6 +46,7 @@ const SearchBar = () => {
         if (!searchValue) {
             setErrorMessage('No Results!')
             setLoading(false);
+            setSearchValue("");
 
             setTimeout(() => {
                 setErrorMessage('')
@@ -62,7 +63,7 @@ const SearchBar = () => {
             const data = await response.json()
             setErrorMessage('')
             setLoading(false);
-
+            setSearchValue("");
             setResults(data)
             console.log(data)
         } catch (error) {
