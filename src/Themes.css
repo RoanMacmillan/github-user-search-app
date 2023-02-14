@@ -10,7 +10,7 @@
 
 .App.light {
 
-    background-color: white;
+    background-color: rgb(243, 254, 255);
 }
 
 .light .SearchBar,
@@ -78,3 +78,4 @@
 
     filter: unset;
 }
+
